@@ -25,11 +25,20 @@ public class ReadData {
     }
 
     public List<String> getData() throws IOException {
+<<<<<<< HEAD
         List lists = new ArrayList();
         String line;
         BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(path)));
         while ((line = bufferedReader.readLine()) != null) {
             lists.add(line.trim());
+=======
+        List lists = new ArrayList();String line;
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(path)));
+        while ((line = bufferedReader.readLine()) != null) {
+            if (!line.trim().equals("")){
+                lists.add(line.trim());
+            }
+>>>>>>> b4eea0e62a0cd537c233009368200ad90bba9fa1
         }
         return lists;
     }

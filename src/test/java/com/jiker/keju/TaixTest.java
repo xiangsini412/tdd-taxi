@@ -18,6 +18,7 @@ public class TaixTest {
         assertEquals(charge.getCountByDisAndTime(2, 3), 7);
     }
 
+<<<<<<< HEAD
 //    @Test
 //    public void get_distance_and_time() {
 //        ReadData readData = new ReadData("testData.txt");
@@ -27,6 +28,17 @@ public class TaixTest {
 //        int[][] arr = {{1, 0}, {2, 3}};
 //        assertEquals(readData.getDistanceAndTime(lists), arr);
 //    }
+=======
+    @Test
+    public void get_distance_and_time() {
+        ReadData readData = new ReadData("testData.txt");
+        List<String> lists = new ArrayList<>();
+        lists.add("1公里，等待0分钟\n");
+        lists.add("2公里，等待3分钟\n");
+        int[][] arr = {{1, 0}, {2, 3}};
+        assertEquals(readData.getDistanceAndTime(lists), arr);
+    }
+>>>>>>> b4eea0e62a0cd537c233009368200ad90bba9fa1
 
     @Test
     public void get_data() throws IOException {
